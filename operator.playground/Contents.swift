@@ -1,5 +1,9 @@
-import UIKit
+// 산술 연산자
 
-var str = "Hello, playground"
+var weight = 65
 
-print("\(str)")
+let isTrue: Bool = true
+let isFalse: Bool = false
+
+var test: String = " hello world "
+print("\(test)")
