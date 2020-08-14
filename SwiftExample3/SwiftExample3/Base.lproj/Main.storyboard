@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftExample3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재시간 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYr-IR-Knp">
+                                <rect key="frame" x="65" y="150" width="300" height="19.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="i5v-9o-Hwd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택한 시간:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7R-8a-FbH">
+                                <rect key="frame" x="65" y="566.66666666666663" width="300" height="19.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="5uD-hs-niY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FEN-NT-7hg">
+                                <rect key="frame" x="47" y="277.66666666666669" width="320" height="216"/>
+                                <connections>
+                                    <action selector="UIDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="C1a-zl-opb"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k7R-8a-FbH" secondAttribute="trailing" constant="49" id="9Bj-AA-pnt"/>
+                            <constraint firstItem="FEN-NT-7hg" firstAttribute="top" secondItem="HYr-IR-Knp" secondAttribute="bottom" constant="108.33333333333334" id="Bve-JG-3yc"/>
+                            <constraint firstItem="FEN-NT-7hg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="InU-Zn-EKu"/>
+                            <constraint firstItem="HYr-IR-Knp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="NVF-iI-Glf"/>
+                            <constraint firstItem="HYr-IR-Knp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="VaK-BS-GIA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k7R-8a-FbH" secondAttribute="bottom" constant="150" id="a1q-y6-GUA"/>
+                            <constraint firstItem="k7R-8a-FbH" firstAttribute="top" secondItem="FEN-NT-7hg" secondAttribute="bottom" constant="72.999999999999943" id="ap7-fg-Gz8"/>
+                            <constraint firstItem="k7R-8a-FbH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="jac-lw-Kg4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HYr-IR-Knp" secondAttribute="trailing" constant="49" id="veL-v7-pVP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblNowTimes" destination="HYr-IR-Knp" id="rQ6-Bp-cEM"/>
+                        <outlet property="lblSelectTimes" destination="k7R-8a-FbH" id="8iH-w9-puz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="130"/>
+        </scene>
+    </scenes>
+</document>
