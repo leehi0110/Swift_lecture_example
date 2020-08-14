@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftExam1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMu-Mh-ocr">
+                                <rect key="frame" x="173.5" y="94" width="67" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.50385559260000001" green="0.84267407660000004" blue="0.60604063360000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is swift world!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuc-2l-wTI">
+                                <rect key="frame" x="110" y="179" width="194" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPK-ul-7Pe">
+                                <rect key="frame" x="67" y="253" width="94" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQc-7g-dkM">
+                                <rect key="frame" x="195" y="253" width="179" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeE-rV-F9B">
+                                <rect key="frame" x="70" y="337" width="274" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="SendInputBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8V-Ic-qTx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Yuc-2l-wTI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="4SE-iN-m9j"/>
+                            <constraint firstItem="yQc-7g-dkM" firstAttribute="top" secondItem="Yuc-2l-wTI" secondAttribute="bottom" constant="48.5" id="8vS-wp-tAr"/>
+                            <constraint firstItem="NMu-Mh-ocr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="9eE-Y7-WL0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yQc-7g-dkM" secondAttribute="trailing" constant="40" id="ARX-KI-w2C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yuc-2l-wTI" secondAttribute="trailing" constant="110" id="F4N-Ur-dMY"/>
+                            <constraint firstItem="Yuc-2l-wTI" firstAttribute="top" secondItem="NMu-Mh-ocr" secondAttribute="bottom" constant="49" id="H0T-L0-OlA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NeE-rV-F9B" secondAttribute="trailing" constant="70" id="MMa-ra-Du4"/>
+                            <constraint firstItem="NeE-rV-F9B" firstAttribute="top" secondItem="yQc-7g-dkM" secondAttribute="bottom" constant="50" id="PmB-Ty-jkv"/>
+                            <constraint firstItem="hPK-ul-7Pe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="Tue-p5-Itk"/>
+                            <constraint firstItem="NMu-Mh-ocr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dqc-EY-iop"/>
+                            <constraint firstItem="hPK-ul-7Pe" firstAttribute="top" secondItem="Yuc-2l-wTI" secondAttribute="bottom" constant="48.5" id="mTH-0A-vDQ"/>
+                            <constraint firstItem="yQc-7g-dkM" firstAttribute="leading" secondItem="hPK-ul-7Pe" secondAttribute="trailing" constant="34" id="t0G-fN-rBW"/>
+                            <constraint firstItem="NeE-rV-F9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="zOT-Dg-Y6p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="InputText" destination="yQc-7g-dkM" id="dq9-az-Iij"/>
+                        <outlet property="TextLabel" destination="NMu-Mh-ocr" id="DLL-8f-Av3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
