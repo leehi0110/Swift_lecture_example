@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     let pickerViewColumn = 1
     let pickerViewHeight:CGFloat =  80 // CGFloat란 운영체제에 맞게 타입설정
     var imageArray = [UIImage?]()
-    var imageFileName = ["김자인.jpg", "손흥민.jpg", "이정후.jpg"]
+    var imageFileName = ["김자인", "손흥민", "이정후"]
 
     @IBOutlet weak var PickerImage: UIPickerView!
     @IBOutlet weak var lblSelectPerson: UILabel!
