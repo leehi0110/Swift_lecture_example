@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DigitalFrameExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="손흥민" translatesAutoresizingMaskIntoConstraints="NO" id="gUP-u2-ALE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ul-7d-xPw">
+                                <rect key="frame" x="157" y="634" width="100" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FLT-9H-Zjm"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="fsK-1k-hyL">
+                                <rect key="frame" x="18" y="578" width="254" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="kie-Hx-crb"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="speedSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="YVi-GR-mYL"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7u-Xk-8XM">
+                                <rect key="frame" x="359.33333333333331" y="587" width="41.666666666666686" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6ul-7d-xPw" secondAttribute="bottom" constant="54" id="2rW-ht-TZF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ul-7d-xPw" secondAttribute="trailing" constant="157" id="LcO-8a-fpQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K7u-Xk-8XM" secondAttribute="bottom" constant="128" id="M6z-8h-K7s"/>
+                            <constraint firstItem="gUP-u2-ALE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NxS-14-kzl"/>
+                            <constraint firstItem="K7u-Xk-8XM" firstAttribute="leading" secondItem="fsK-1k-hyL" secondAttribute="trailing" constant="89.333333333333314" id="V85-GQ-2CB"/>
+                            <constraint firstItem="gUP-u2-ALE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YkI-kM-gbZ"/>
+                            <constraint firstItem="gUP-u2-ALE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dt0-sL-PSF"/>
+                            <constraint firstItem="6ul-7d-xPw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="gE8-eb-tKU"/>
+                            <constraint firstItem="fsK-1k-hyL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j7V-Cv-hda"/>
+                            <constraint firstItem="gUP-u2-ALE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="k1Y-8z-0Pd"/>
+                            <constraint firstItem="6ul-7d-xPw" firstAttribute="top" secondItem="fsK-1k-hyL" secondAttribute="bottom" constant="26" id="uXg-Vq-R3h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K7u-Xk-8XM" secondAttribute="trailing" constant="13" id="zaW-Lf-wxP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImgView" destination="gUP-u2-ALE" id="spp-vj-dSC"/>
+                        <outlet property="lblSpeed" destination="K7u-Xk-8XM" id="8Ku-fJ-Ery"/>
+                        <outlet property="speedSlider" destination="fsK-1k-hyL" id="aH2-aK-bcX"/>
+                        <outlet property="toggleBtn" destination="6ul-7d-xPw" id="POW-KW-G3r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.61956521739131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="손흥민" width="800" height="550"/>
+    </resources>
+</document>
