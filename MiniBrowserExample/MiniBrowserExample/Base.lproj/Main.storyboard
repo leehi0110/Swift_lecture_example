@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MiniBrowserExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nPC-4W-xrj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                                <segments>
+                                    <segment title="facebook"/>
+                                    <segment title="twitter"/>
+                                    <segment title="apple"/>
+                                    <segment title="google"/>
+                                </segments>
+                                <connections>
+                                    <action selector="bookMarkAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Guk-km-Z7A"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Jo-zJ-gAR">
+                                <rect key="frame" x="0.0" y="31" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0kh-vI-57g"/>
+                                </connections>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKf-To-1mO">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0VR-EW-Vwt"/>
+                                    <barButtonItem systemItem="rewind" id="Eur-6r-2l8">
+                                        <connections>
+                                            <action selector="GoAction:" destination="BYZ-38-t0r" id="07G-RC-TKv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1oV-Zn-456"/>
+                                    <barButtonItem systemItem="fastForward" id="eXH-qm-x4I">
+                                        <connections>
+                                            <action selector="BackAction:" destination="BYZ-38-t0r" id="Wob-ll-NqP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="EzU-hN-KSL"/>
+                                    <barButtonItem systemItem="stop" id="vIY-r2-bTY">
+                                        <connections>
+                                            <action selector="StopAction:" destination="BYZ-38-t0r" id="hGh-3Q-mqh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RG1-vK-vTM"/>
+                                    <barButtonItem systemItem="refresh" id="Uvb-0X-iMm">
+                                        <connections>
+                                            <action selector="reloadAction:" destination="BYZ-38-t0r" id="KDw-fS-HEM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MED-NV-hWF"/>
+                                </items>
+                            </toolbar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSz-DM-9hl">
+                                <rect key="frame" x="0.0" y="65" width="414" height="627"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Can-zQ-eSE">
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ZGV-VH-yPL"/>
+                                    <constraint firstAttribute="width" constant="100" id="amX-JW-sil"/>
+                                </constraints>
+                                <color key="color" red="0.50385559260000001" green="0.84267407660000004" blue="0.60604063360000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fKf-To-1mO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="73e-nX-gZQ"/>
+                            <constraint firstItem="fKf-To-1mO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9CP-9h-Tng"/>
+                            <constraint firstItem="fKf-To-1mO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9cI-oL-iY4"/>
+                            <constraint firstItem="fKf-To-1mO" firstAttribute="top" secondItem="pSz-DM-9hl" secondAttribute="bottom" id="ETu-jx-5TG"/>
+                            <constraint firstItem="Can-zQ-eSE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NJz-AL-QOF"/>
+                            <constraint firstItem="nPC-4W-xrj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NNE-Xv-Z0P"/>
+                            <constraint firstItem="3Jo-zJ-gAR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bhf-pH-pnu"/>
+                            <constraint firstItem="pSz-DM-9hl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hVw-jN-voI"/>
+                            <constraint firstItem="pSz-DM-9hl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hbr-mv-fPA"/>
+                            <constraint firstItem="3Jo-zJ-gAR" firstAttribute="top" secondItem="nPC-4W-xrj" secondAttribute="bottom" id="iOT-vA-z64"/>
+                            <constraint firstItem="nPC-4W-xrj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oLO-PY-GMT"/>
+                            <constraint firstItem="Can-zQ-eSE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pAb-sa-qI6"/>
+                            <constraint firstItem="pSz-DM-9hl" firstAttribute="top" secondItem="3Jo-zJ-gAR" secondAttribute="bottom" id="quB-QR-rAu"/>
+                            <constraint firstItem="nPC-4W-xrj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uzb-sJ-NWh"/>
+                            <constraint firstItem="fKf-To-1mO" firstAttribute="top" secondItem="pSz-DM-9hl" secondAttribute="bottom" id="w4f-Xt-yJU"/>
+                            <constraint firstItem="3Jo-zJ-gAR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yTa-my-8sb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="URLTextField" destination="3Jo-zJ-gAR" id="KPW-BW-vQu"/>
+                        <outlet property="bookMarkSegmentedControll" destination="nPC-4W-xrj" id="S1M-qm-2KD"/>
+                        <outlet property="mainWebView" destination="pSz-DM-9hl" id="LZT-lE-sR7"/>
+                        <outlet property="spiningActivityIndicator" destination="Can-zQ-eSE" id="1Gc-HL-UFR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="132.88043478260872"/>
+        </scene>
+    </scenes>
+</document>
