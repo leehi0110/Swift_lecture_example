@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FloatingButtonExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeatherBG_Sun (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="x6p-vf-QUu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skV-d5-1LM">
+                                <rect key="frame" x="314" y="762" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4x4-XQ-4Lo"/>
+                                    <constraint firstAttribute="width" constant="60" id="JMi-YM-DPG"/>
+                                </constraints>
+                                <state key="normal" image="add_icon_green.png"/>
+                                <connections>
+                                    <segue destination="xbv-0l-ptd" kind="show" identifier="ShowPopup" animates="NO" id="SRJ-7h-ev8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="skV-d5-1LM" secondAttribute="bottom" constant="40" id="0c5-jb-3ap"/>
+                            <constraint firstAttribute="trailing" secondItem="x6p-vf-QUu" secondAttribute="trailing" id="Srk-Ck-Phh"/>
+                            <constraint firstItem="x6p-vf-QUu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ws5-C6-8CN"/>
+                            <constraint firstAttribute="bottom" secondItem="x6p-vf-QUu" secondAttribute="bottom" id="bmc-B2-eq7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="skV-d5-1LM" secondAttribute="trailing" constant="40" id="gpv-da-IXK"/>
+                            <constraint firstItem="x6p-vf-QUu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xwk-kZ-sPB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="118"/>
+        </scene>
+        <!--Floating Button List Controller-->
+        <scene sceneID="lhn-SC-YN0">
+            <objects>
+                <viewController id="xbv-0l-ptd" customClass="floatingButtonListController" customModule="FloatingButtonExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pc8-LV-fCj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nNU-bf-h9l">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Co7-GA-5RE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xut-Lv-nuT">
+                                <rect key="frame" x="319" y="473" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Qac-4U-ZKx"/>
+                                    <constraint firstAttribute="width" constant="50" id="UKX-BQ-lph"/>
+                                </constraints>
+                                <state key="normal" image="food3.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18h-G4-ZeX">
+                                <rect key="frame" x="319" y="553" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9oL-3l-Gly"/>
+                                    <constraint firstAttribute="width" constant="50" id="ffV-Gc-gVX"/>
+                                </constraints>
+                                <state key="normal" image="food2.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cn-lD-GtE">
+                                <rect key="frame" x="319" y="633" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1eo-SW-DCt"/>
+                                    <constraint firstAttribute="height" constant="50" id="81E-cL-HbN"/>
+                                </constraints>
+                                <state key="normal" image="food1.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKG-pf-PVh">
+                                <rect key="frame" x="314" y="708" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="LJq-CD-GIe"/>
+                                    <constraint firstAttribute="width" constant="60" id="muJ-Wo-V7z"/>
+                                </constraints>
+                                <state key="normal" image="add_icon_green.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fKG-pf-PVh" firstAttribute="centerX" secondItem="18h-G4-ZeX" secondAttribute="centerX" id="1n3-Q0-JhR"/>
+                            <constraint firstItem="fKG-pf-PVh" firstAttribute="centerX" secondItem="0cn-lD-GtE" secondAttribute="centerX" id="7Ky-Vp-zlV"/>
+                            <constraint firstItem="fKG-pf-PVh" firstAttribute="centerX" secondItem="xut-Lv-nuT" secondAttribute="centerX" id="CfO-pY-Anm"/>
+                            <constraint firstItem="fKG-pf-PVh" firstAttribute="centerY" secondItem="0cn-lD-GtE" secondAttribute="centerY" constant="80" id="azU-ZV-JvL"/>
+                            <constraint firstItem="bK2-BG-DKj" firstAttribute="trailing" secondItem="fKG-pf-PVh" secondAttribute="trailing" constant="40" id="cVz-X7-pGR"/>
+                            <constraint firstItem="fKG-pf-PVh" firstAttribute="centerY" secondItem="xut-Lv-nuT" secondAttribute="centerY" constant="240" id="fOJ-wx-KCq"/>
+                            <constraint firstItem="fKG-pf-PVh" firstAttribute="centerY" secondItem="18h-G4-ZeX" secondAttribute="centerY" constant="160" id="gJd-96-XBc"/>
+                            <constraint firstItem="bK2-BG-DKj" firstAttribute="bottom" secondItem="fKG-pf-PVh" secondAttribute="bottom" constant="40" id="oa9-p3-Xtc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bK2-BG-DKj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pTR-b1-Ti5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aL-s4-FUV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.60869565217399" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WeatherBG_Sun (1).png" width="180" height="320.16000366210938"/>
+        <image name="add_icon_green.png" width="385.60000610351562" height="384.79998779296875"/>
+        <image name="food1.png" width="256" height="256"/>
+        <image name="food2.png" width="256" height="256"/>
+        <image name="food3.png" width="256" height="256"/>
+    </resources>
+</document>
