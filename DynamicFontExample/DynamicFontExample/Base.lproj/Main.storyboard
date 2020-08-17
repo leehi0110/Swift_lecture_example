@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DynamicFontExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsI-4U-isf">
+                                <rect key="frame" x="20" y="181.33333333333331" width="374" height="533.33333333333348"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cert_BG.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="HMI-4e-luz">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="533.33333333333337"/>
+                                        <color key="backgroundColor" red="0.50385559260000001" green="0.84267407660000004" blue="0.60604063360000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공인인증서" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="QnC-B4-Uep">
+                                        <rect key="frame" x="121.66666666666667" y="0.0" width="130.66666666666663" height="186.66666666666666"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홍길동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-qQ-yOU">
+                                        <rect key="frame" x="134.66666666666666" y="0.0" width="104.66666666666666" height="378.66666666666669"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="발급자: 금융결제원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fQB-22-eAP">
+                                        <rect key="frame" x="121.66666666666667" y="0.0" width="130.66666666666663" height="480"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="종류: 은행" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OnO-bh-TMA">
+                                        <rect key="frame" x="121.66666666666666" y="0.0" width="82" height="559.66666666666663"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만료일: 2020.08.17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="RP5-Ou-5yd">
+                                        <rect key="frame" x="121.66666666666664" y="0.0" width="138.33333333333337" height="639.66666666666663"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HMI-4e-luz" secondAttribute="trailing" id="2NZ-wz-4f6"/>
+                                    <constraint firstItem="yEo-qQ-yOU" firstAttribute="centerX" secondItem="HMI-4e-luz" secondAttribute="centerX" id="2TC-hp-DTO"/>
+                                    <constraint firstItem="OnO-bh-TMA" firstAttribute="leading" secondItem="RP5-Ou-5yd" secondAttribute="leading" id="4zE-2y-h4r"/>
+                                    <constraint firstItem="yEo-qQ-yOU" firstAttribute="centerX" secondItem="HMI-4e-luz" secondAttribute="centerX" id="5Bo-dh-CPS"/>
+                                    <constraint firstItem="RP5-Ou-5yd" firstAttribute="top" secondItem="HMI-4e-luz" secondAttribute="top" id="6Qd-hn-jZR"/>
+                                    <constraint firstItem="HMI-4e-luz" firstAttribute="leading" secondItem="lsI-4U-isf" secondAttribute="leading" id="ACn-1z-wPm"/>
+                                    <constraint firstItem="RP5-Ou-5yd" firstAttribute="width" secondItem="HMI-4e-luz" secondAttribute="width" multiplier="0.37" id="Cta-JY-nPc"/>
+                                    <constraint firstItem="yEo-qQ-yOU" firstAttribute="width" secondItem="HMI-4e-luz" secondAttribute="width" multiplier="0.28" id="Fcc-ql-1aD"/>
+                                    <constraint firstAttribute="bottom" secondItem="HMI-4e-luz" secondAttribute="bottom" id="HnG-ef-UuH"/>
+                                    <constraint firstItem="QnC-B4-Uep" firstAttribute="top" secondItem="HMI-4e-luz" secondAttribute="top" id="LI7-cy-o4g"/>
+                                    <constraint firstItem="QnC-B4-Uep" firstAttribute="centerX" secondItem="HMI-4e-luz" secondAttribute="centerX" id="Mcz-nc-g8V"/>
+                                    <constraint firstItem="QnC-B4-Uep" firstAttribute="bottom" secondItem="HMI-4e-luz" secondAttribute="bottom" multiplier="0.35" id="OFV-mM-jM2"/>
+                                    <constraint firstItem="fQB-22-eAP" firstAttribute="width" secondItem="HMI-4e-luz" secondAttribute="width" multiplier="0.35" id="QwR-3H-Sos"/>
+                                    <constraint firstItem="fQB-22-eAP" firstAttribute="bottom" secondItem="HMI-4e-luz" secondAttribute="bottom" multiplier="0.9" id="R0M-jq-n42"/>
+                                    <constraint firstItem="QnC-B4-Uep" firstAttribute="width" secondItem="HMI-4e-luz" secondAttribute="width" multiplier="0.35" id="SZR-XA-j7h"/>
+                                    <constraint firstItem="HMI-4e-luz" firstAttribute="top" secondItem="lsI-4U-isf" secondAttribute="top" id="Whn-r4-YX8"/>
+                                    <constraint firstItem="OnO-bh-TMA" firstAttribute="leading" secondItem="fQB-22-eAP" secondAttribute="leading" id="bbP-Gk-jU0"/>
+                                    <constraint firstItem="OnO-bh-TMA" firstAttribute="width" secondItem="HMI-4e-luz" secondAttribute="width" multiplier="0.22" id="cTx-Jj-r1l"/>
+                                    <constraint firstItem="fQB-22-eAP" firstAttribute="top" secondItem="HMI-4e-luz" secondAttribute="top" id="e7S-Mc-0Ut"/>
+                                    <constraint firstItem="yEo-qQ-yOU" firstAttribute="top" secondItem="HMI-4e-luz" secondAttribute="top" id="fMj-lX-5Hg"/>
+                                    <constraint firstAttribute="width" secondItem="lsI-4U-isf" secondAttribute="height" multiplier="1009:1438" id="hM5-EH-khP"/>
+                                    <constraint firstItem="OnO-bh-TMA" firstAttribute="bottom" secondItem="HMI-4e-luz" secondAttribute="bottom" multiplier="1.05" id="hXL-d2-AGh"/>
+                                    <constraint firstItem="OnO-bh-TMA" firstAttribute="top" secondItem="HMI-4e-luz" secondAttribute="top" id="lGR-UG-eqe"/>
+                                    <constraint firstItem="RP5-Ou-5yd" firstAttribute="bottom" secondItem="HMI-4e-luz" secondAttribute="bottom" multiplier="1.2" id="qoz-c2-FXg"/>
+                                    <constraint firstItem="fQB-22-eAP" firstAttribute="centerX" secondItem="HMI-4e-luz" secondAttribute="centerX" id="sfT-pk-ffh"/>
+                                    <constraint firstItem="yEo-qQ-yOU" firstAttribute="bottom" secondItem="HMI-4e-luz" secondAttribute="bottom" multiplier="0.71" id="vYh-x9-heS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lsI-4U-isf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BwV-GE-uUx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lsI-4U-isf" secondAttribute="trailing" constant="20" id="C6T-zE-G49"/>
+                            <constraint firstItem="lsI-4U-isf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wbd-Sj-Gt6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cert_BG.PNG" width="1009" height="1438"/>
+    </resources>
+</document>
