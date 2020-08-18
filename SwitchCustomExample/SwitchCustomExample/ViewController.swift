@@ -10,11 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var switchBG: UIView!
+    @IBOutlet weak var switchBtn: UIButton!
+    @IBOutlet weak var buttonCenterX: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        switchBG.layer.cornerRadius = switchBG.bounds.height / 2
+        switchBtn.layer.cornerRadius = switchBtn.bounds.width / 2
     }
 
-
+    @IBAction func selectedBtn(_ sender: Any) {
+        
+        UIView.animate(withDuration: 0.3) {
+            self.buttonCenterX.constant = self.buttonCenterX.constant*(-1)
+            
+            if self.buttonCenterX.constant > 0 {
+                 self.switchBG.backgroundColor = UIColor.yellow
+            }
+            else {
+                self.switchBG.backgroundColor = UIColor.gray
+            }
+            self.view.layoutIfNeeded()
+        }
+    }
+    
 }
 
