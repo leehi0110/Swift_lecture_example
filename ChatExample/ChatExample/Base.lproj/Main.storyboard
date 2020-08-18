@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-Nu-Yu4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="AjM-nR-w9H"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RMM-s0-JBU"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geo-Cs-aCS">
+                                <rect key="frame" x="0.0" y="688" width="414" height="48"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-wH-aJa">
+                                        <rect key="frame" x="4" y="4" width="340" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jMg-oy-A3C"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="G4L-1G-Qdr"/>
+                                        </connections>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfA-fL-dS8">
+                                        <rect key="frame" x="348" y="0.0" width="66" height="48"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <state key="normal" title="전송"/>
+                                        <connections>
+                                            <action selector="sendStringAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Zc-s2-0PH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="SfA-fL-dS8" secondAttribute="trailing" id="5Wb-dE-UC3"/>
+                                    <constraint firstItem="SfA-fL-dS8" firstAttribute="leading" secondItem="oTz-wH-aJa" secondAttribute="trailing" constant="4" id="7hU-0G-Upa"/>
+                                    <constraint firstItem="oTz-wH-aJa" firstAttribute="leading" secondItem="geo-Cs-aCS" secondAttribute="leading" constant="4" id="AKq-gn-83i"/>
+                                    <constraint firstItem="oTz-wH-aJa" firstAttribute="top" secondItem="geo-Cs-aCS" secondAttribute="top" constant="4" id="BaX-LE-plh"/>
+                                    <constraint firstItem="SfA-fL-dS8" firstAttribute="top" secondItem="geo-Cs-aCS" secondAttribute="top" id="Dpv-EF-GKd"/>
+                                    <constraint firstAttribute="bottom" secondItem="oTz-wH-aJa" secondAttribute="bottom" constant="4" id="Rhe-Wd-sNP"/>
+                                    <constraint firstAttribute="bottom" secondItem="SfA-fL-dS8" secondAttribute="bottom" id="viy-pL-ZcT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="geo-Cs-aCS" firstAttribute="top" secondItem="Ieg-Nu-Yu4" secondAttribute="bottom" id="0uc-Lu-co0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ieg-Nu-Yu4" secondAttribute="trailing" id="9Ha-el-JbD"/>
+                            <constraint firstItem="geo-Cs-aCS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gjd-12-IRj"/>
+                            <constraint firstItem="Ieg-Nu-Yu4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Knv-Fj-AkF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="geo-Cs-aCS" secondAttribute="trailing" id="NRu-TK-9nm"/>
+                            <constraint firstItem="Ieg-Nu-Yu4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qb7-Sj-Ifa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="geo-Cs-aCS" secondAttribute="bottom" id="y33-Om-cb0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chatTableView" destination="Ieg-Nu-Yu4" id="GX3-me-L4o"/>
+                        <outlet property="inputTextView" destination="oTz-wH-aJa" id="bR4-kS-4GW"/>
+                        <outlet property="inputTextViewHeight" destination="jMg-oy-A3C" id="o4T-Pj-WDb"/>
+                        <outlet property="inputViewBtnMargin" destination="jMg-oy-A3C" id="5ss-ND-geK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="132.88043478260872"/>
+        </scene>
+    </scenes>
+</document>
