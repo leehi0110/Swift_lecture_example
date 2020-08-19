@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlightBookingExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nge-MH-pdV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="1Mh-lY-OHD">
+                                <rect key="frame" x="30" y="150" width="354" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Departure" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsJ-AM-CSa">
+                                        <rect key="frame" x="0.0" y="0.0" width="130.33333333333334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUY-Di-M2z">
+                                        <rect key="frame" x="166.33333333333334" y="0.0" width="21.666666666666657" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Arrival" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YkU-wP-gN6">
+                                        <rect key="frame" x="224" y="0.0" width="130" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YkU-wP-gN6" firstAttribute="width" secondItem="dsJ-AM-CSa" secondAttribute="width" id="a8X-jq-Kpf"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="gfg-wc-y2L">
+                                <rect key="frame" x="30" y="204" width="354" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbG-u2-p0K">
+                                        <rect key="frame" x="0.0" y="0.0" width="122.33333333333333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.59999999999999998" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9D-Au-u5M">
+                                        <rect key="frame" x="170.33333333333337" y="0.0" width="183.66666666666663" height="34"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Select Date">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showDatePickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfp-e6-Qb0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-AY-S5K">
+                                <rect key="frame" x="30" y="312" width="354" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-Gs-QdB">
+                                        <rect key="frame" x="0.0" y="0.0" width="122.33333333333333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.60000002384185791" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fE-Fb-bW9">
+                                        <rect key="frame" x="170.33333333333337" y="0.0" width="183.66666666666663" height="34"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Select Date">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectedDateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w0o-Hj-eEg"/>
+                                            <action selector="showDatePickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HKa-hg-wKu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="123" translatesAutoresizingMaskIntoConstraints="NO" id="rRa-Hv-OIC">
+                                <rect key="frame" x="30" y="258" width="354" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round Trip:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3M-Q7-vfr">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QsJ-9u-23f">
+                                        <rect key="frame" x="305" y="0.0" width="51" height="34"/>
+                                        <color key="onTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="showReturnDateAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="GDd-FI-esv"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdd-Ex-Qff">
+                                <rect key="frame" x="50" y="366" width="314" height="34"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="SoJ-kK-9WB">
+                                <rect key="frame" x="0.0" y="500" width="414" height="236"/>
+                                <connections>
+                                    <action selector="selectedDateAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="EeU-xh-Osj"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gfg-wc-y2L" firstAttribute="top" secondItem="1Mh-lY-OHD" secondAttribute="bottom" constant="20" id="2aZ-cB-Q7b"/>
+                            <constraint firstItem="nge-MH-pdV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2cd-Zz-3qW"/>
+                            <constraint firstItem="Qdd-Ex-Qff" firstAttribute="top" secondItem="WHS-AY-S5K" secondAttribute="bottom" constant="20" id="5DC-Bx-JEG"/>
+                            <constraint firstItem="Qdd-Ex-Qff" firstAttribute="height" secondItem="1Mh-lY-OHD" secondAttribute="height" id="5lX-UP-E8q"/>
+                            <constraint firstItem="Qdd-Ex-Qff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="8vC-y7-czH"/>
+                            <constraint firstItem="SoJ-kK-9WB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C2F-eW-rrF"/>
+                            <constraint firstItem="1Mh-lY-OHD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ciu-Jx-CCZ"/>
+                            <constraint firstItem="SoJ-kK-9WB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ct7-NG-Hss"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gfg-wc-y2L" secondAttribute="trailing" constant="30" id="JW0-Wv-dRo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rRa-Hv-OIC" secondAttribute="trailing" constant="30" id="R0i-YY-HeA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WHS-AY-S5K" secondAttribute="trailing" constant="30" id="RBa-At-rhe"/>
+                            <constraint firstItem="gfg-wc-y2L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="XMv-m5-jkT"/>
+                            <constraint firstItem="rRa-Hv-OIC" firstAttribute="top" secondItem="gfg-wc-y2L" secondAttribute="bottom" constant="20" id="ZYs-8C-eF7"/>
+                            <constraint firstItem="rRa-Hv-OIC" firstAttribute="height" secondItem="1Mh-lY-OHD" secondAttribute="height" id="a19-oi-P6Q"/>
+                            <constraint firstItem="WHS-AY-S5K" firstAttribute="top" secondItem="rRa-Hv-OIC" secondAttribute="bottom" constant="20" id="dDF-HO-vHx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qdd-Ex-Qff" secondAttribute="trailing" constant="50" id="dfF-rR-Fwf"/>
+                            <constraint firstItem="rRa-Hv-OIC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dpN-Af-M1E"/>
+                            <constraint firstAttribute="bottom" secondItem="nge-MH-pdV" secondAttribute="bottom" id="eJS-Kq-ty2"/>
+                            <constraint firstItem="gfg-wc-y2L" firstAttribute="height" secondItem="1Mh-lY-OHD" secondAttribute="height" id="fUB-EF-9Xr"/>
+                            <constraint firstItem="nge-MH-pdV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="faj-lb-XRH"/>
+                            <constraint firstItem="1Mh-lY-OHD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="gSv-qm-KTk"/>
+                            <constraint firstItem="SoJ-kK-9WB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hbt-Dk-1qY"/>
+                            <constraint firstItem="WHS-AY-S5K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hkH-hS-Rvx"/>
+                            <constraint firstItem="SoJ-kK-9WB" firstAttribute="top" secondItem="Qdd-Ex-Qff" secondAttribute="bottom" constant="100" id="lL1-cB-HvF"/>
+                            <constraint firstItem="WHS-AY-S5K" firstAttribute="height" secondItem="1Mh-lY-OHD" secondAttribute="height" id="ub0-Fi-b3k"/>
+                            <constraint firstAttribute="trailing" secondItem="nge-MH-pdV" secondAttribute="trailing" id="xbd-ar-2Jj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Mh-lY-OHD" secondAttribute="trailing" constant="30" id="yo3-gN-d9z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="departureDateBtn" destination="c9D-Au-u5M" id="qqA-z3-XuP"/>
+                        <outlet property="lblreturnDate" destination="vVL-Gs-QdB" id="gRw-y3-iij"/>
+                        <outlet property="returnDateBtn" destination="7fE-Fb-bW9" id="cRn-Cz-zQ1"/>
+                        <outlet property="selectDatePicker" destination="SoJ-kK-9WB" id="pmd-uy-03A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="132.88043478260872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.jpg" width="1382.4000244140625" height="921.5999755859375"/>
+    </resources>
+</document>
