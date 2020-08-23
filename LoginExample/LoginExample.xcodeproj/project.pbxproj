@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC3AAF1F24F21D9A005A2067 /* SignUpAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3AAF1E24F21D9A005A2067 /* SignUpAccountViewController.swift */; };
 		DC4222D224F13A7C001B9C57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4222D124F13A7C001B9C57 /* AppDelegate.swift */; };
 		DC4222D424F13A7C001B9C57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4222D324F13A7C001B9C57 /* SceneDelegate.swift */; };
-		DC4222D624F13A7C001B9C57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4222D524F13A7C001B9C57 /* ViewController.swift */; };
+		DC4222D624F13A7C001B9C57 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4222D524F13A7C001B9C57 /* SignInViewController.swift */; };
 		DC4222D924F13A7C001B9C57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4222D724F13A7C001B9C57 /* Main.storyboard */; };
 		DC4222DB24F13A7D001B9C57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4222DA24F13A7D001B9C57 /* Assets.xcassets */; };
 		DC4222DE24F13A7D001B9C57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4222DC24F13A7D001B9C57 /* LaunchScreen.storyboard */; };
@@ -18,10 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC3AAF1E24F21D9A005A2067 /* SignUpAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAccountViewController.swift; sourceTree = "<group>"; };
 		DC4222CE24F13A7C001B9C57 /* LoginExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4222D124F13A7C001B9C57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC4222D324F13A7C001B9C57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC4222D524F13A7C001B9C57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC4222D524F13A7C001B9C57 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		DC4222D824F13A7C001B9C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC4222DA24F13A7D001B9C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC4222DD24F13A7D001B9C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,8 +66,9 @@
 				DC4222D324F13A7C001B9C57 /* SceneDelegate.swift */,
 				DC4222E524F13AFC001B9C57 /* namingLogoSample.png */,
 				DC4222E724F13BE2001B9C57 /* naming.png */,
-				DC4222D524F13A7C001B9C57 /* ViewController.swift */,
 				DC4222D724F13A7C001B9C57 /* Main.storyboard */,
+				DC4222D524F13A7C001B9C57 /* SignInViewController.swift */,
+				DC3AAF1E24F21D9A005A2067 /* SignUpAccountViewController.swift */,
 				DC4222DA24F13A7D001B9C57 /* Assets.xcassets */,
 				DC4222DC24F13A7D001B9C57 /* LaunchScreen.storyboard */,
 				DC4222DF24F13A7D001B9C57 /* Info.plist */,
@@ -146,8 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC4222D624F13A7C001B9C57 /* ViewController.swift in Sources */,
+				DC4222D624F13A7C001B9C57 /* SignInViewController.swift in Sources */,
 				DC4222D224F13A7C001B9C57 /* AppDelegate.swift in Sources */,
+				DC3AAF1F24F21D9A005A2067 /* SignUpAccountViewController.swift in Sources */,
 				DC4222D424F13A7C001B9C57 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
